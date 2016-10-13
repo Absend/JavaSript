@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>html-HW-1&#8482;</title>
+	<style>
+		#wrapper {
+			padding: 5px;
+			border: 2px solid darkmagenta;
+			border-radius: 7px
+		}
+		
+		header {
+			text-align: center;
+			background-color: lightsteelblue;
+			padding-top: 2px
+		}
+		
+		.task-links {
+			margin-left: 25px;
+			margin-right: 25px;
+			display: inline-block;
+			color: darkmagenta
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		main {
+			min-height: 500px
+		}
+		
+		#doge-container {
+			min-height: 480px;
+			background-color: lightblue;
+			padding: 10px
+		}
+		
+        #doge-main {
+            font-weight: bold
+        }
+
+		.doge-links {
+			text-decoration: underline;
+			color: darkmagenta
+		}
+		
+		.doge-info {
+			margin-left: 40px
+		}
+		
+		footer {
+			padding-top: 25px;
+			min-height: 50px;
+			font-size: 1.5em;
+			text-align: center;
+			background-color: lightsteelblue
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>HTML Fundamentals Homework</h1>
+			<hr>
+			<a class="task-links" onclick="showTask(1)">
+				<h3>Problem 1. Runners Home page</h3>
+			</a>
+			<a class="task-links" onclick="showTask(2)">
+				<h3>Problem 2. Nested Lists</h3>
+			</a>
+			<a class="task-links" onclick="showTask(3)">
+				<h3>Problem 3. Social site</h3>
+			</a>
+			<hr />
+		</header>
+
+		<main id="content"></main>
+
+		<footer>
+			copyright&#169;2016
+		</footer>
+	</div>
+
+	<!-- templates -->
+	<script type="handlebars-template" id="task-1">
+        <div>
+            <div id="text"><br/> 
+                Hello, Stranger!<br/>
+                <h1><b>Welcome to Runners Home&#8482;</b></h1>
+                <h2>Runners Home&#8482; is dedicated to providing you with:</h2>
+                <ul type="disc">
+                    <li>the most up-to-date information on running races.</li>
+                    <li>the best resources for runners.</li>
+                </ul>
+            </div>
+            <hr>
+            <p>
+                &#169;Runners Home. All rights reserved.
+            </p>
+        </div>
+    </script>
+
+	<script type="handlebars-template" id="task-2">
+        <div>Preceding Text <br/>
+            <ol type="I">
+                <li> List Item 1 <br/>
+                    <ol type="a">
+                        <li>Nested Item 1.1</li>
+                        <li>Nested Item 1.2</li>
+                    </ol>
+                </li>
+                <li>List Item 2 <br/>
+                    <ol type="1">
+                        <li>Nested Item 2.1</li>
+                        <li>Nested Item 2.2<br/>
+                            <ul type="circle">
+                                <li>Nested Item 2.2.1</li>
+                                <li>Nested Item 2.2.2<br/>
+                                <ul type="square">
+                                    <li>Nested Item 2.2.2.1</li>
+                                    <li>Nested Item 2.2.2.2</li>
+                                </ul>
+                                </li>
+                                <li>Nested Item 2.2.3</li>
+                            </ul>
+                        </li>
+                        <li>Nested Item 2.3</li>
+                    </ol>
+                </li>
+                <li>List Item 3<br/>
+                <ul type="disc">
+                    <li>Nested Item 3.1</li>
+                    <li>Nested Item 3.2</li>
+                    <li>Nested Item 3.3</li>
+                </ul>
+                </li>
+            </ol>
+        </div>
+    </script>
+
+	<script type="handlebars-template" id="task-3">
+        <div id="doge-container">
+            <p>
+                <div>
+                    <h1 id="doge-main">Doge Social Network</h1>
+                    <ul type = "disc">
+                        <li><a class="doge-links" onclick="showTask3(1)">Home</a></li>
+                        <li><a class="doge-links" onclick="showTask3(2)">Profile</a></li>
+                        <li><a class="doge-links" onclick="showTask3(3)">Friends</a></li>
+                    </ul>
+                    <hr>
+                </div>
+            </p>
+            <div id="doge-content">
+                <p>
+                    <h2>Welcome to the Doge Social Network</h2><hr>
+                </p>
+                <p>
+                    Here you can find friends or stalk strangers.<br/><br/>
+                    The Doge Social Network does not take any responsibility for the information found
+                </p>
+            </div>
+        </div>
+    </script>
+
+	<script type="handlebars-template" id="task-3-1">
+        <p>
+            <h2>Welcome to the Doge Social Network</h2>
+            <hr>
+        </p>
+        <p>
+            Here you can find friends or stalk strangers.<br/><br/>
+            The Doge Social Network does not take any responsibility for the information found
+        </p>
+    </script>
+
+	<script type="handlebars-template" id="task-3-2">
+        <p>
+            <h2>Profile of Doge</h2>
+            <hr>
+        </p>
+        <p>
+            <img src="Doge.png" alt="Doge"><br>
+            <b>Name : </b>Doge <br>
+            <b>Birthday : </b>Top Secret<br>
+            <b>Occupation : </b>Celebrity<br>
+            <b>Area of occupation : </b>Web<br>
+        </p>
+    </script>
+
+	<script type="handlebars-template" id="task-3-3">
+        <p>
+            <h2>Friends of Doge</h2>
+            <hr>
+        </p>
+        <p>
+            <i>Such Friend</i>
+            <div class="doge-info">best friend</div>
+            <i>Many Friends</i>
+            <div class="doge-info">unknown</div>
+            <i>Wow</i>
+            <div class="doge-info">yeah, right</div>			
+        </p>
+    </script>
+
+	<!-- scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script>
+        function showTask(num){
+            postTemplateHTML = document.getElementById("task-" + num).innerHTML;
+            compiledTemplate = Handlebars.compile(postTemplateHTML);
+            document.getElementById("content").innerHTML = compiledTemplate();
+        }
+
+        function showTask3(num){
+            postTemplateHTML = document.getElementById("task-3-" + num).innerHTML;
+            compiledTemplate = Handlebars.compile(postTemplateHTML);
+            document.getElementById("doge-content").innerHTML = compiledTemplate();
+        }
+    </script>
+</body>
+
+</html>
