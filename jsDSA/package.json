@@ -1,0 +1,16 @@
+{
+  "name": "jsdsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha  tests/",
+    "start": "node list.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.1.2"
+  }
+}
