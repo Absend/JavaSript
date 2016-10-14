@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require("chai").expect;
-var listResult = require("../linear-data-structures/list");
+var listResult = require("../jsDSA/linear-data-structures/list");
 
 describe("List Tests", function () {
     describe("Created empty list", function () {

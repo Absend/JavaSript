@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require("chai").expect;
-var stackResult = require("../linear-data-structures/stack");
+var stackResult = require("../jsDSA/linear-data-structures/stack");
 
 describe("Stack Tests", function () {
     describe("Created empty stack", function () {

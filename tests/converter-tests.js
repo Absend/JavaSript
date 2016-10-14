@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var result = require('../app/js/converter');
+var result = require('../converter/converter');
 
 describe('Converter Tests', function () {
     describe("Color Code Converter", function () {

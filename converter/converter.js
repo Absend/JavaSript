@@ -1,3 +1,5 @@
+"use strict";
+
 (function converter() {
     exports.rgbToHex = function (red, green, blue) {
 
@@ -6,7 +8,6 @@
         var blueHex = blue.toString(16);
 
         return pad(redHex) + pad(greenHex) + pad(blueHex);
-
     };
 
     function pad(hex) {
@@ -20,7 +21,6 @@
         var blue = parseInt(hex.substring(4, 6), 16);
 
         return [red, green, blue];
-
     };
 
     exports.decToBin = function (dec) {

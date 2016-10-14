@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require("chai").expect;
-var queueResult = require("../linear-data-structures/queue");
+var queueResult = require("../jsDSA/linear-data-structures/queue");
 
 describe("Queue Tests", function () {
     describe("Created empty queue", function () {
