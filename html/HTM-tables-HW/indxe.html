@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Tables Homework</title>
+	<style>
+		body {
+			background-color: lightsteelblue
+		}
+		
+		header {
+			min-height: 50px;
+			background-color: lightsteelblue;
+			text-align: center;
+			font-size: 18px;
+			color: darkmagenta
+		}
+		
+		main {
+			min-height: 600px;
+			background-color: lightblue
+		}
+		
+		#tasks-container {
+			padding-top: 1%
+		}
+		
+		#first-table {
+			background-color: white;
+			display: block;
+			margin: 20px
+		}
+		
+		#first-table-data {
+			text-align: left;
+			text-decoration: none;
+		}
+		
+		#second-table {
+			background-color: white;
+			margin: 80px;
+		}
+		
+		h3 {
+			text-decoration: underline;
+			color: darkmagenta
+		}
+		
+		#form {
+			background-color: white;
+			margin: 50px;
+			float: left;
+		}
+		
+		#form-container {
+			font-size: 20px;
+			margin: 10px;
+			padding: 10px;
+		}
+		
+		label,
+		input,
+		b {
+			float: left
+		}
+		
+		#submit {
+			width: 55px;
+			height: 30px;
+			background-image: url("./submit.png");
+			float: left
+		}
+		
+		#table-calc {
+			background: white;
+			border: 2px solid darkmagenta;
+			border-collapse: collapse;
+			text-shadow: 2px 2px 3px #aba
+		}
+		
+		#display {
+			display: inline-block;
+			width: 50px;
+			background: white;
+			padding: 5px 10px;
+			border: none;
+			font-size: 30px;
+			font-family: Consolas;
+			font-weight: bold;
+			color: darkmagenta;
+			text-shadow: 2px 2px 3px #aaa;;
+            float: right
+		}
+		
+		.td-calc {
+			border: 2px solid darkmagenta;
+		}
+		
+		.buttons {
+			background: white;
+			border: none;
+			padding: 10px 20px;
+			font-size: 30px;
+			font-family: Consolas;
+			font-weight: bold;
+			color: darkmagenta;
+			text-shadow: 2px 2px 3px #aba
+		}
+		
+        #form-calc{
+            float: left;
+            margin-left: 125px
+        }
+
+		.tasks {
+			display: inline-block;
+			margin-left: 0.7%;
+			min-width: 32%;
+			min-height: 580px;
+			border: 2px solid darkmagenta;
+			background-color: lightblue;
+			text-align: center
+		}
+		
+		footer {
+			padding-top: 25px;
+			min-height: 50px;
+			font-size: 1.5em;
+			text-align: center;
+			background-color: lightsteelblue
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>HTML Tables Homework</h1>
+			<nav>
+				<a class="nav-links first"></a>
+				<a class="nav-links"></a>
+				<a class="nav-links"></a>
+			</nav>
+		</header>
+		<main>
+			<div id="tasks-container">
+				<div class="tasks">
+					<h3>Problem 1. HTML Tables</h3>
+					<table id="first-table">
+						<tr>
+							<td colspan="2" class="td-first">
+								<h2>
+									<em>Fresh Fruits</em>
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td id="first-table-data">
+								<h4>It has long been known that a diet<br /> that includes at least a few<br /> servings of fresh food every day<br />									will help keep you healthy, fit and<br /> trim.
+								</h4>
+							</td>
+							<td>
+								<img src="fruits.jpg" />
+							</td>
+						</tr>
+					</table>
+					<table id="second-table" border="1">
+						<colgroup>
+							<col></col>
+						</colgroup>
+						<tr>
+							<td colspan="3">Title goes here</td>
+							<td width="30" , align="center">A</td>
+							<td align="right" , width="30">B</td>
+						</tr>
+						<tr>
+							<td rowspan="3" , align="left" , width="30">C</td>
+							<td align="center" , width="30">D</td>
+							<td align="center" , width="30">E</td>
+							<td align="center">F</td>
+							<td align="right">G</td>
+						</tr>
+						<tr>
+							<td align="center">H</td>
+							<td colspan="2" , align="center">I</td>
+							<td rowspan="2" , align="right" , valign="bottom">J</td>
+						</tr>
+						<tr>
+							<td align="center">K</td>
+							<td align="center">L</td>
+							<td align="center">M</td>
+						</tr>
+						<tr>
+							<td align="right">N</td>
+							<td colspan="4" , align="center">O</td>
+						</tr>
+					</table>
+				</div>
+				<div class="tasks">
+					<h3>Problem 2. HTML Form</h3>
+					<form id="form">
+						<div id="form-container">
+							<label for="">Member name : &nbsp;</label><input type="text" name="MemberName"></input><b>&nbsp;*req</b><br/>
+							<label for="">Email : &nbsp;</label><input type="text" name="Email"></input> <b>&nbsp;*req</b><br/>
+							<label for="">School : &nbsp;</label><input type="text" name="School"></input> <b>&nbsp;*req</b><br/>
+							<button id="submit"></button>
+						</div>
+					</form>
+				</div>
+				<div class="tasks">
+					<h3>Problem 3. Calculator</h3>
+					<form id="form-calc">
+						<table id="table-calc">
+							<tr>
+								<td class="td-calc td-dispay" colspan="4">
+									<input id="display" type="text" value="69" />
+								</td>
+							</tr><br/>
+							<tr>
+								<td class="td-calc"><button class="buttons">1</button></td>
+								<td class="td-calc"><button class="buttons">2</button></td>
+								<td class="td-calc"><button class="buttons">3</button></td>
+								<td class="td-calc"><button class="buttons">+</button></td>
+							</tr><br/>
+							<tr>
+								<td class="td-calc"><button class="buttons">4</button></td>
+								<td class="td-calc"><button class="buttons">5</button></td>
+								<td class="td-calc"><button class="buttons">6</button></td>
+								<td class="td-calc"><button class="buttons">-</button></td>
+							</tr><br/>
+							<tr>
+								<td class="td-calc"><button class="buttons">7</button></td>
+								<td class="td-calc"><button class="buttons">8</button></td>
+								<td class="td-calc"><button class="buttons">9</button></td>
+								<td class="td-calc"><button class="buttons">*</button></td>
+							</tr><br/>
+							<tr>
+								<td class="td-calc" colspan="2" align="center"><button class="buttons">0</button></td>
+								<td class="td-calc"><button class="buttons">.</button></td>
+								<td class="td-calc"><button class="buttons">/</button></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer>
+			copyright&#169;2016
+		</footer>
+	</div>
+</body>
+
+</html>
