@@ -1,6 +1,6 @@
 "use strict";
 
-exports.list = (function () {
+module.exports = (() => {
     class List {
         constructor() {
             this._listSize = 0;
@@ -23,7 +23,7 @@ exports.list = (function () {
             return this._dataStore[this._pos];
         }
 
-        append(element) {
+        add(element) {
             this._dataStore.push(element);
             ++this._listSize;
             return this;
@@ -33,9 +33,11 @@ exports.list = (function () {
             let i,
                 len = this._dataStore.length;
 
-            for (i = 0; i < len; i += 1) {
-                if (this._dataStore[i] === element) {
-                    return i;
+            if (len > 0) {
+                for (i = 0; i < len; i += 1) {
+                    if (this._dataStore[i] === element) {
+                        return i;
+                    }
                 }
             }
             return -1;
@@ -59,7 +61,15 @@ exports.list = (function () {
         }
 
         toString() {
-            return this._dataStore;
+            let result = "",
+                i,
+                len = this._dataStore.length;
+
+            for (i = 0; i < len; i += 1) {
+                result += this._dataStore[i] + " ";
+            }
+
+            return result;
         }
 
         insert(element, after) {
