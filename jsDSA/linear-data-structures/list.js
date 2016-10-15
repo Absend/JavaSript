@@ -16,7 +16,33 @@ module.exports = (() => {
             return this._pos;
         }
         set currPos(position) {
-            this._pos = position;
+            if (0 <= position && position < this._dataStore.length) {
+                this._pos = position;
+            } else {
+                this._pos = 0;
+            }
+        }
+
+        get frontPos() {
+            return this._pos = 0;
+        }
+
+        get endPos() {
+            return this._pos = this._listSize - 1;
+        }
+
+        get prevPos() {
+            if (this._pos > 0) {
+                return --this._pos;
+            }
+            return -1;
+        }
+
+        get nextPos() {
+            if (this._pos < this._listSize - 1) {
+                return ++this._pos;
+            }
+            return -1;
         }
 
         get elementAtPos() {
@@ -65,9 +91,10 @@ module.exports = (() => {
                 i,
                 len = this._dataStore.length;
 
-            for (i = 0; i < len; i += 1) {
+            for (i = 0; i < len - 1; i += 1) {
                 result += this._dataStore[i] + " ";
             }
+            result += this._dataStore[len - 1];
 
             return result;
         }
@@ -90,9 +117,8 @@ module.exports = (() => {
         }
 
         clear() {
-            delete this._dataStore;
             this._dataStore = [];
-            this.list = this._pos = 0;
+            this._listSize = this._pos = 0;
         }
 
         contains(element) {
@@ -100,27 +126,6 @@ module.exports = (() => {
                 return true;
             }
             return false;
-        }
-
-        // Traversing a List
-        frontPos() {
-            this._pos = 0;
-        }
-
-        endPos() {
-            this._pos = this._listSize - 1;
-        }
-
-        prevPos() {
-            if (this._pos > 0) {
-                --this._pos;
-            }
-        }
-
-        nextPos() {
-            if (this._pos < this._listSize - 1) {
-                ++this._pos;
-            }
         }
     }
 
