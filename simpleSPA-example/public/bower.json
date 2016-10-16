@@ -1,0 +1,22 @@
+{
+  "name": "public",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Absend <at.papucharov@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "handlebars": "^4.0.5",
+    "sammy": "^0.7.6"
+  }
+}

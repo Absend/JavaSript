@@ -8,6 +8,10 @@ module.exports = (() => {
             this._dataStore = [];
         }
 
+        get data() {
+            return this._dataStore;
+        }
+
         get lenght() {
             return this._listSize;
         }

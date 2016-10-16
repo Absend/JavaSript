@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>SPA example</title>
+	<style>
+		header {
+			background-color: lightsteelblue
+		}
+		
+        h1 {
+            margin-left: 30%;
+        }
+
+		nav {
+			
+		}
+		
+		ul {
+			list-style-type: none;
+		}
+		
+		li {
+			display: inline-block;
+			margin-left: 2%;
+			margin-bottom: 2%
+		}
+
+        main{
+            min-height: 600px
+        }
+
+        footer {
+			background-color: lightsteelblue;
+            text-align: center
+        }
+	</style>
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<header>
+			<h1>SPA</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="#/main">Main</a>
+					</li>
+					<li>
+						<a href="#/people">People</a>
+					</li>
+					<li>
+						<a href="#/cats">Cats</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="content"></div>
+		</main>
+		<footer>
+			<p>copywrite&#169;2016</p>
+		</footer>
+	</div>
+
+	<!-- Libs -->
+	<script src="./bower_components/jquery/dist/jquery.js"></script>
+	<script src="./bower_components/handlebars/handlebars.js"></script>
+	<script src="./bower_components/sammy/lib/sammy.js"></script>
+
+	<script src="./node_modules/systemjs/dist/system.js"></script>
+
+	<!-- System config -->
+	<script>
+        (function () {
+            SystemJS.config({
+                transpiler: "plugin-babel",
+                map:{
+                    "plugin-babel": "./node_modules/systemjs-plugin-babel/plugin-babel.js",
+                    "systemjs-babel-build": "./node_modules/systemjs-plugin-babel/systemjs-babel-browser.js",
+                    "main": "./app.js"
+                }
+            });
+            System.import("main");
+        })();
+    </script>
+</body>
+
+</html>
