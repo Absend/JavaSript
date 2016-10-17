@@ -21,7 +21,6 @@ class Control {
         this.data
             .then(function (value) {
                 let data = value.db[0];
-                console.log(data);
                 return view.pagePeople(selector, data);
             });
     }
@@ -30,7 +29,6 @@ class Control {
         this.data
             .then(function (value) {
                 let data = value.db[1];
-                console.log(data);
                 return view.pageCats(selector, data);
             });
     }
