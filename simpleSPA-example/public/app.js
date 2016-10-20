@@ -5,7 +5,7 @@ import {
 } from "./control/control.js";
 
 (function () {
-    let sammyApp = Sammy("#content", function () {
+    let router = Sammy(function () {
 
         this.get("#/", function () {
             this.redirect("#/main");
@@ -20,11 +20,11 @@ import {
         });
 
         this.get("#/cats", (context) => {
-            control.cats("#content");
+            control.cats("#other-content");
         });
     });
 
     $(function () {
-        sammyApp.run("#/");
+       router.run("#/");
     });
 })();
