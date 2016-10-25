@@ -13,11 +13,16 @@ describe("LinkedList Tests", function () {
             expect(null).to.eql(linkedList.head.next);
         });
 
-        // it(".insertAfter head next node is not null", function () {
-        //     linkedList.insertAfter("hi", "head");
-        //     let currNode = 
-        //     expect("hi").to.equal(linkedList.head.next);
-        // });
+        it(".insertAfter head next node is not null", function () {
+            linkedList.insertAfter("hi", "head");
+            expect(true).to.equal(linkedList.head.next != null);
+        });
+
+        it(".insertAfter head next element is inserted", function () {
+            linkedList.insertAfter("hi", "head");
+            expect("hi").to.eql(linkedList.head.next.element);
+        });
+
     });
 
 });

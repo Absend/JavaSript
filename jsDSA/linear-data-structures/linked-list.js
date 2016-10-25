@@ -14,6 +14,9 @@ module.exports = (() => {
         get next() {
             return this._next;
         }
+        set next(value){
+            this._next = value;
+        }
     }
 
     class LinkedList {
