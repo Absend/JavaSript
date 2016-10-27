@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tanks</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Tanks</h1>
+        </header>
+        <main id="game-container">
+            <aside class="main tools">
+                
+            </aside>
+            <div id="screen" class="main">
+                <canvas id="background-canvas"></canvas>
+                <canvas id="front-canvas"></canvas>
+                <canvas id="wind-canvas"></canvas>
+                <canvas id="tankL-canvas"></canvas>
+                <canvas id="tankR-canvas"></canvas>
+            </div>
+            <aside class="main tools">
+                
+            </aside>
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+    
+	<!-- Libs -->
+	<script src="./bower_components/jquery/dist/jquery.js"></script>
+	<script src="./bower_components/handlebars/handlebars.js"></script>
+	<script src="./bower_components/sammy/lib/sammy.js"></script>
+
+	<script src="../node_modules/systemjs/dist/system.js"></script>
+
+	<!-- System config -->
+	<script>
+        (function () {
+            SystemJS.config({
+                transpiler: "plugin-babel",
+                map:{
+                    "plugin-babel": "../node_modules/systemjs-plugin-babel/plugin-babel.js",
+                    "systemjs-babel-build": "../node_modules/systemjs-plugin-babel/systemjs-babel-browser.js",
+                    "main": "./main.js"
+                }
+            });
+            System.import("main");
+        })();
+    </script>
+</body>
+</html>

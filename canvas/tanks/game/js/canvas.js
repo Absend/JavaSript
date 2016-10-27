@@ -1,4 +1,6 @@
-var Canvas = {
+"use strict";
+
+var canvas = {
         strokeLine: function (context, x0, y0, x, y, strokeColor) {
 
             context.beginPath();
@@ -285,4 +287,6 @@ var Canvas = {
             this.ctx2d = this.canvas.getContext('2d');
         }
     };
+
+    export { canvas }
     
