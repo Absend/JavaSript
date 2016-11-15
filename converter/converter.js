@@ -23,7 +23,35 @@
         return [red, green, blue];
     };
 
+    exports.hexToDec = function (hex) {
+        var input = String(hex);
+
+        // var hexKey = "0123456789ABCDEF";
+        // var dec = 0;
+
+        // var len = input.length;
+        // for (var i = 0; i < len; i += 1) {
+        //     var digit = hexKey.indexOf(input[i].toUpperCase());
+
+        //     dec = digit + dec * 16;
+        // }
+
+        // return dec;
+
+        return parseInt(input, 16);
+    }
+
+    exports.hexToBin = function (hex) {
+        var input = String(hex);
+
+        return parseInt(input, 16).toString(2);
+    }
+
     exports.decToBin = function (dec) {
-            return (dec >>> 0).toString(2);
-        }
+        return dec.toString(2);
+    }
+
+    exports.decToHex = function (dec) {
+        return dec.toString(16).toUpperCase();
+    }
 })();

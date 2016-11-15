@@ -30,15 +30,86 @@ describe('Converter Tests', function () {
 
     describe("Numbers Converter", function () {
         describe("Decimal to Binary string conversion", function () {
-            it("converts numbers 7 -> \"111\", 64 -> \"1000000\", 100 -> \"1100100\"", function () {
+            it("convert number 7 -> \"111\"", function () {
                 var seven = result.decToBin(7);
-                var sixtyFour = result.decToBin(64);
-                var aHundred = result.decToBin(100);
 
                 expect(seven).to.equal("111");
+            });
+            it("convert number 64 -> \"1000000\"", function () {
+                var sixtyFour = result.decToBin(64);
+
                 expect(sixtyFour).to.equal("1000000");
+            });
+            it("convert number 100 -> \"1100100\"", function () {
+                var aHundred = result.decToBin(100);
+
                 expect(aHundred).to.equal("1100100");
             });
         });
+
+        describe("Decimal to Hexadecimal string conversion", function () {
+            it("converts numbers 7 -> \"7\"", function () {
+                var seven = result.decToHex(7);
+
+                expect(seven).to.equal("7");
+            });
+            it("converts numbers 15 -> \"F\"", function () {
+                var seven = result.decToHex(15);
+
+                expect(seven).to.equal("F");
+            });
+            it("converts numbers 170 -> \"AA\"", function () {
+                var seven = result.decToHex(170);
+
+                expect(seven).to.equal("AA");
+            });
+        });
+
+        describe("Hexadecimal to Decimal conversion", function () {
+            it("converts hex \"F\" to bin 15", function () {
+                var seven = result.hexToDec("F");
+
+                expect(seven).to.equal(15);
+            });
+            it("converts hex \"aa\" to dec 170", function () {
+                var seven = result.hexToDec("aa");
+
+                expect(seven).to.equal(170);
+            });
+            it("converts hex 256 to dec 598", function () {
+                var sixtyFour = result.hexToDec(256);
+
+                expect(sixtyFour).to.equal(598);
+            });
+            it("converts hex 100 to dec 256", function () {
+                var aHundred = result.hexToDec("100");
+
+                expect(aHundred).to.equal(256);
+            });
+        });
+
+        describe("Hexadecimal to Binary conversion", function () {
+            it("converts hex \"aa\" to bin \"10101010\"", function () {
+                var seven = result.hexToBin("aa");
+
+                expect(seven).to.equal("10101010");
+            });
+            it("converts hex \"F\" to bin \"1111\"", function () {
+                var seven = result.hexToBin("F");
+
+                expect(seven).to.equal("1111");
+            });
+            it("converts hex 256 to bin \"1001010110\"", function () {
+                var sixtyFour = result.hexToBin(256);
+
+                expect(sixtyFour).to.equal("1001010110");
+            });
+            it("converts hex 100 to bin \"100000000\"", function () {
+                var aHundred = result.hexToBin("100");
+
+                expect(aHundred).to.equal("100000000");
+            });
+        });
+
     });
 });
